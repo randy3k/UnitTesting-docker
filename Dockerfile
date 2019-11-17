@@ -2,13 +2,13 @@ FROM ubuntu:latest
 
 USER root
 RUN apt-get update
-RUN apt-get install sudo apt-utils  -y
-RUN apt-get install python software-properties-common  -y
-RUN apt-get install git curl xvfb  -y
-RUN apt-get install libglib2.0-0 libgtk-3-0 -y
-RUN apt-get install psmisc -y
-RUN apt-get install locales locales-all -y
-ENV LC_ALL en_US.UTF-8
+RUN apt-get install --no-install-recommends sudo apt-utils  -y
+RUN apt-get install --no-install-recommends python software-properties-common  -y
+RUN apt-get install --no-install-recommends git curl xvfb  -y
+RUN apt-get install --no-install-recommends libglib2.0-0 libgtk-3-0 -y
+RUN apt-get install --no-install-recommends psmisc -y
+RUN apt-get install --no-install-recommends locales locales-all -y
+
 ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US.UTF-8
 ENV SUBLIME_TEXT_VERSION=3
