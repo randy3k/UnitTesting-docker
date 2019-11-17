@@ -13,7 +13,7 @@ Bootstrap() {
         # symlink does not play well with coverage
         echo "copy the package to sublime package directory"
         mkdir -p "$STP/$PACKAGE"
-        find . -type f -not -path './.git/*' -exec cp --parents '{}' "$STP/$PACKAGE/" \;
+        find . -not -path "./.git/*" -type f -exec cp --parents {} "$STP/$PACKAGE/" \;
     fi
 
     # Disable warnings about detached HEAD
