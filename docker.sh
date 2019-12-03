@@ -24,7 +24,7 @@ Bootstrap() {
     if [ ! -d "$UT_PATH" ]; then
 
         if [ -z $UT_URL ]; then
-            UT_URL="https://github.com/randy3k/UnitTesting"
+            UT_URL="https://github.com/SublimeText/UnitTesting"
         fi
 
         if [ -z $UNITTESTING_TAG ]; then
