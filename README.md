@@ -4,5 +4,5 @@
 # cd the repo
 docker build -t unittesting .
 # cd to package
-docker run --rm -it -e PACKAGE=$PACKAGE -v $PWD:/home/docker/project unittesting 
+docker run --rm -it -e PACKAGE=$PACKAGE -v $PWD:/project unittesting 
 ```

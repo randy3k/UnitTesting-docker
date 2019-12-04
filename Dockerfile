@@ -22,13 +22,5 @@ COPY entrypoint.sh /entrypoint.sh
 RUN chmod 666 /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 
-RUN adduser --disabled-password --gecos '' docker
-RUN adduser docker sudo
-RUN echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
-
-USER docker
-RUN mkdir -p /home/docker/project
-
-
-WORKDIR /home/docker/project
+WORKDIR /project
 ENTRYPOINT ["/entrypoint.sh"]
