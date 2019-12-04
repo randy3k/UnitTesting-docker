@@ -26,12 +26,6 @@ RUN adduser --disabled-password --gecos '' docker
 RUN adduser docker sudo
 RUN echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 
-# for github actions
-RUN mkdir -p /github/home
-RUN mkdir -p /github/workspace
-RUN mkdir -p /github/workflow
-RUN chown -R docker:docker /github
-
 USER docker
 RUN mkdir -p /home/docker/project
 
